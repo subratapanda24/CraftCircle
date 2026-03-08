@@ -252,7 +252,7 @@
 
 /* GUIDELINES — 2-col grid with numbered items */
 .gl-section {
-    background: var(--ink);
+    background: #1c1c1c;
     padding: 3.5rem 0
 }
 
@@ -260,7 +260,7 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 1px;
-    background: rgba(255, 255, 255, .05);
+    background: #1c1c1c;
     margin-top: 2rem
 }
 
