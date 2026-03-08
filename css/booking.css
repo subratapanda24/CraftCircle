@@ -317,9 +317,10 @@
     width:100%;
     height:100%;
     object-fit:cover;
-    object-position:center top;
+    object-position:50% 40%;
     transition:transform .4s;
 }
+
 .summary-card:hover .summary-img img {
     transform: scale(1.03)
 }
