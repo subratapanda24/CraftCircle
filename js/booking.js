@@ -3,16 +3,16 @@ let selectedSeat = null;
 let TOTAL_SEATS = 16;
 
 const workshopImages = {
-    "Abstract Acrylic Pour": "Images/arc.jpg",
-    "Watercolor Florals": "Images/water.jpg",
-    "Galaxy Resin Art": "Images/resin.jpg",
-    "Wheel Throwing": "Images/wheel.jpg",
-    "Hand-Built Ceramics": "Images/ceramics.jpg",
-    "Glaze & Fire": "Images/glaze.jpg",
-    "Botanical Soy Candles": "Images/soy.jpg",
-    "Pillar Candle Sculpting": "Images/candle.jpg",
-    "Granny Square": "Images/granny.jpg",
-    "Amigurumi Toy Making": "Images/toy.jpg"
+    "Abstract Acrylic Pour": "images/arc.jpg",
+    "Watercolor Florals": "images/water.jpg",
+    "Galaxy Resin Art": "images/resin.jpg",
+    "Wheel Throwing": "images/wheel.jpg",
+    "Hand-Built Ceramics": "images/ceramics.jpg",
+    "Glaze & Fire": "images/glaze.jpg",
+    "Botanical Soy Candles": "images/soy.jpg",
+    "Pillar Candle Sculpting": "images/candle.jpg",
+    "Granny Square": "images/granny.jpg",
+    "Amigurumi Toy Making": "images/toy.jpg"
 };
 
 const workshopCapacity = {
