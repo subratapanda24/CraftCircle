@@ -1,0 +1,301 @@
+/* FULL-WIDTH BANNER */
+.ws-banner {
+    padding-top: 60px;
+    background: var(--ink);
+    position: relative;
+    overflow: hidden
+}
+
+.ws-banner-inner {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 3rem 3rem 2.5rem;
+    position: relative;
+    z-index: 1
+}
+
+.ws-banner h1 {
+    font-family: var(--font-display);
+    font-size: clamp(2.2rem, 4vw, 3.5rem);
+    font-weight: 300;
+    line-height: 1.08;
+    color: var(--white)
+}
+
+.ws-banner h1 em {
+    font-style: italic;
+    color: var(--accent)
+}
+
+.ws-banner p {
+    margin-top: .75rem;
+    font-size: .85rem;
+    color: rgba(255, 255, 255, .45);
+    max-width: 400px;
+    line-height: 1.65
+}
+
+.ws-banner-bg {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 45%;
+    opacity: 1;
+}
+
+.ws-banner-bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position:top
+}
+
+/* FILTER */
+.filter-bar {
+    background: var(--white);
+    border-bottom: 1px solid var(--border);
+    position: sticky;
+    top: 60px;
+    z-index: 100
+}
+
+.filter-inner {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 3rem;
+    display: flex;
+    gap: 0;
+    overflow-x: auto
+}
+
+.filter-btn {
+    background: none;
+    border: none;
+    border-bottom: 2px solid transparent;
+    padding: .85rem 1.25rem;
+    font-family: var(--font-body);
+    font-size: .7rem;
+    font-weight: 500;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+    color: var(--muted);
+    cursor: pointer;
+    white-space: nowrap;
+    transition: all .2s
+}
+
+.filter-btn:hover {
+    color: var(--ink)
+}
+
+.filter-btn.active {
+    color: var(--ink);
+    border-bottom-color: var(--ink)
+}
+
+.count-badge {
+    display: inline-block;
+    margin-left: .3rem;
+    background: var(--border);
+    color: var(--muted);
+    font-size: .58rem;
+    padding: .05rem .4rem;
+    border-radius: 50px;
+    font-weight: 600
+}
+
+/* CARD GRID — different from index.html list layout */
+.ws-section {
+    padding: 3rem 0 4rem
+}
+
+.ws-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem
+}
+
+.ws-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    overflow: hidden;
+    transition: transform .3s, box-shadow .3s
+}
+
+.ws-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, .08)
+}
+
+.ws-card-img {
+    height: 180px;
+    overflow: hidden;
+    position: relative
+}
+
+.ws-card-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform .5s
+}
+
+.ws-card:hover .ws-card-img img {
+    transform: scale(1.04)
+}
+
+.ws-card-badge {
+    position: absolute;
+    top: .75rem;
+    left: .75rem;
+    background: rgba(255, 255, 255, .92);
+    font-size: .55rem;
+    font-weight: 600;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    padding: .15rem .55rem;
+    border-radius: 50px;
+    color: var(--ink)
+}
+
+.ws-card-body {
+    padding: 1.15rem 1.25rem
+}
+
+.ws-card-body h3 {
+    font-family: var(--font-display);
+    font-size: 1.15rem;
+    font-weight: 400;
+    color: var(--ink);
+    margin-bottom: .35rem;
+    line-height: 1.2
+}
+
+.ws-card-body>p {
+    font-size: .78rem;
+    color: var(--muted);
+    line-height: 1.6;
+    margin-bottom: .85rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden
+}
+
+.ws-card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .85rem 1.25rem;
+    border-top: 1px solid var(--border);
+    background: var(--off-white)
+}
+
+.ws-card-price {
+    font-family: var(--font-display);
+    font-size: 1.15rem;
+    font-weight: 400;
+    color: var(--ink)
+}
+
+.ws-card-meta {
+    display: flex;
+    gap: .75rem;
+    font-size: .65rem;
+    color: var(--muted);
+    font-weight: 500
+}
+
+.seats-pill {
+    display: inline-block;
+    padding: .15rem .55rem;
+    border-radius: 50px;
+    font-size: .6rem;
+    font-weight: 600
+}
+
+.seats-ok {
+    background: #e8f5e9;
+    color: #2e7d32
+}
+
+.seats-low {
+    background: #fff3e0;
+    color: #e65100
+}
+
+.seats-full {
+    background: #fce4ec;
+    color: #c62828
+}
+
+.ws-card-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: .25rem;
+    font-size: .65rem;
+    font-weight: 600;
+    letter-spacing: .04em;
+    text-transform: uppercase;
+    color: var(--ink);
+    transition: color .2s
+}
+
+.ws-card-btn:hover {
+    color: var(--accent-dark)
+}
+
+#noResults {
+    display: none;
+    text-align: center;
+    padding: 3rem;
+    font-size: .9rem;
+    color: var(--muted)
+}
+
+@media(max-width:900px) {
+    .ws-grid {
+        grid-template-columns: 1fr 1fr
+    }
+}
+
+@media(max-width:600px) {
+    .ws-grid {
+        grid-template-columns: 1fr
+    }
+
+    .ws-banner-bg {
+        display: none
+    }
+}
+
+.ws-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 1rem;
+}
+
+.ws-banner .section-eyebrow {
+  color: rgba(255,255,255,.3);
+}
+
+#catTitle {
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  font-weight: 300;
+  color: var(--ink);
+}
+
+#catCount {
+  font-size: .75rem;
+  color: var(--muted);
+}
+
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 3rem;
+}
+

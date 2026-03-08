@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Workshops — CraftCircle</title>
+  <meta name="description"
+    content="Hands-on workshops led by master craftspeople. Pottery, painting, candle making, crochet and more.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Outfit:wght@300;400;500;600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/workshops.css">
+</head>
+<body class="relative">
+  <nav class="cc-nav"><a href="index.html" class="nav-logo">Craft<span>Circle</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="workshops.html" class="active">Workshops</a></li>
+      <li><a href="calendar.html">Calendar</a></li>
+      <li><a href="booking.html">Booking</a></li>
+      <li><a href="materials.html">Materials</a></li>
+    </ul>
+    <div class="nav-right"><a href="booking.html" class="nav-btn">Book a Seat ↗</a><button class="cc-hamburger"
+        onclick="toggleMobileNav()"><span></span><span></span><span></span></button></div>
+  </nav>
+  <div class="mobile-nav"><a href="index.html">Home</a><a href="workshops.html" class="active">Workshops</a><a
+      href="calendar.html">Calendar</a><a href="booking.html">Booking</a><a href="materials.html">Materials</a></div>
+
+  <!-- BANNER — full-width dark, different from index hero -->
+  <div class="ws-banner">
+    <div class="ws-banner-bg"><img
+        src="images/head.jpg" alt=""></div>
+    <div class="ws-banner-inner">
+      <div class="section-eyebrow reveal">All skill levels welcome</div>
+      <h1 class="reveal">Our <em>Workshops</em></h1>
+      <p class="reveal">Hands-on sessions led by master craftspeople. From therapeutic pottery to vibrant painting —
+        discover your medium.</p>
+    </div>
+  </div>
+
+  <!-- FILTER -->
+  <div class="filter-bar">
+    <div class="filter-inner">
+      <button class="filter-btn active" onclick="filterW('all',this)">All<span class="count-badge">11</span></button>
+      <button class="filter-btn" onclick="filterW('painting',this)">Painting<span class="count-badge">3</span></button>
+      <button class="filter-btn" onclick="filterW('pottery',this)">Pottery<span class="count-badge">3</span></button>
+      <button class="filter-btn" onclick="filterW('candle',this)">Candle Making<span
+          class="count-badge">2</span></button>
+      <button class="filter-btn" onclick="filterW('crochet',this)">Crochet<span class="count-badge">3</span></button>
+    </div>
+  </div>
+
+  <!-- WORKSHOPS GRID -->
+  <section class="ws-section">
+    <div style="max-width:1140px;margin:0 auto;padding:0 3rem">
+      <div class="ws-header">
+        <h2 id="catTitle">All Workshops</h2>
+        <span id="catCount">Showing 11 workshops</span>
+      </div>
+      <div class="ws-grid" id="workshopsList">
+
+        <div class="ws-card" data-category="painting">
+          <div class="ws-card-img"><img
+              src="images/arc.jpg" alt=""><span
+              class="ws-card-badge">Painting</span></div>
+          <div class="ws-card-body">
+            <h3>Abstract Acrylic Pour</h3>
+            <p>Create mesmerizing fluid art using acrylic pouring techniques. No experience needed.</p>
+            <div class="ws-card-meta"><span>2.5 hrs</span><span class="seats-pill seats-low">8 left</span></div>
+          </div>
+          <div class="ws-card-footer"><span class="ws-card-price">₹1,200</span><a href="booking.html"
+              class="ws-card-btn">Book →</a></div>
+        </div>
+
+        <div class="ws-card" data-category="painting">
+          <div class="ws-card-img"><img
+              src="images/water.jpg" alt=""><span
+              class="ws-card-badge">Painting</span></div>
+          <div class="ws-card-body">
+            <h3>Watercolor Florals</h3>
+            <p>Master the wet-on-wet technique for dreamy, luminous botanical illustrations.</p>
+            <div class="ws-card-meta"><span>2 hrs</span><span class="seats-pill seats-ok">14 left</span></div>
+          </div>
+          <div class="ws-card-footer"><span class="ws-card-price">₹1,000</span><a href="booking.html"
+              class="ws-card-btn">Book →</a></div>
+        </div>
+
+        <div class="ws-card" data-category="painting">
+          <div class="ws-card-img"><img
+              src="images/resin.jpg" alt=""><span
+              class="ws-card-badge">Painting</span></div>
+          <div class="ws-card-body">
+            <h3>Galaxy Resin Art</h3>
+            <p>Swirl pigments and resin into cosmic, one-of-a-kind canvases.</p>
+            <div class="ws-card-meta"><span>3 hrs</span><span class="seats-pill seats-low">6 left</span></div>
+          </div>
+          <div class="ws-card-footer"><span class="ws-card-price">₹1,500</span><a href="booking.html"
+              class="ws-card-btn">Book →</a></div>
+        </div>
+
+        <div class="ws-card" data-category="pottery">
+          <div class="ws-card-img"><img
+              src="images/wheel.jpg" alt=""><span
+              class="ws-card-badge">Pottery</span></div>
+          <div class="ws-card-body">
+            <h3>Wheel Throwing for Beginners</h3>
+            <p>Feel the clay rise and take form beneath your hands. Meditative and tactile.</p>
+            <div class="ws-card-meta"><span>3 hrs</span><span class="seats-pill seats-low">3 left</span></div>
+          </div>
+          <div class="ws-card-footer"><span class="ws-card-price">₹1,800</span><a href="booking.html"
+              class="ws-card-btn">Book →</a></div>
+        </div>
+
+        <div class="ws-card" data-category="pottery">
+          <div class="ws-card-img"><img
+              src="images/ceramics.jpg" alt=""><span
+              class="ws-card-badge">Pottery</span></div>
+          <div class="ws-card-body">
+            <h3>Hand-Built Ceramics</h3>
+            <p>Pinching, coiling, and slab techniques for sculptural vessels. No wheel needed.</p>
+            <div class="ws-card-meta"><span>2.5 hrs</span><span class="seats-pill seats-ok">12 left</span></div>
+          </div>
+          <div class="ws-card-footer"><span class="ws-card-price">₹1,400</span><a href="booking.html"
+              class="ws-card-btn">Book →</a></div>
+        </div>
+
+        <div class="ws-card" data-category="pottery">
+          <div class="ws-card-img"><img
+              src="images/glaze.jpg" alt=""><span
+              class="ws-card-badge">Pottery</span></div>
+          <div class="ws-card-body">
+            <h3>Glaze & Fire Masterclass</h3>
+            <p>Learn the art of glazing — layering, wax resist, and loading the kiln.</p>
+            <div class="ws-card-meta"><span>2 hrs</span><span class="seats-pill seats-ok">9 left</span></div>
+          </div>
+          <div class="ws-card-footer"><span class="ws-card-price">₹900</span><a href="booking.html"
+              class="ws-card-btn">Book →</a></div>
+        </div>
+
+        <div class="ws-card" data-category="candle">
+          <div class="ws-card-img"><img
+              src="images/soy.jpg" alt=""><span
+              class="ws-card-badge">Candle Making</span></div>
+          <div class="ws-card-body">
+            <h3>Botanical Soy Candles</h3>
+            <p>Blend your perfect fragrance and embed dried botanicals into soy candles.</p>
+            <div class="ws-card-meta"><span>2 hrs</span><span class="seats-pill seats-ok">10 left</span></div>
+          </div>
+          <div class="ws-card-footer"><span class="ws-card-price">₹950</span><a href="booking.html"
+              class="ws-card-btn">Book →</a></div>
+        </div>
+
+        <div class="ws-card" data-category="candle">
+          <div class="ws-card-img"><img
+              src="images/candle.jpg" alt=""><span
+              class="ws-card-badge">Candle Making</span></div>
+          <div class="ws-card-body">
+            <h3>Pillar Candle Sculpting</h3>
+            <p>Traditional dipping and sculpting methods for ornate beeswax pillars.</p>
+            <div class="ws-card-meta"><span>2.5 hrs</span><span class="seats-pill seats-low">7 left</span></div>
+          </div>
+          <div class="ws-card-footer"><span class="ws-card-price">₹1,100</span><a href="booking.html"
+              class="ws-card-btn">Book →</a></div>
+        </div>
+
+        <div class="ws-card" data-category="crochet">
+          <div class="ws-card-img"><img
+              src="images/granny.jpg" alt=""><span
+              class="ws-card-badge">Crochet</span></div>
+          <div class="ws-card-body">
+            <h3>Granny Square Workshop</h3>
+            <p>Master the foundational granny square and join them into coasters and bags.</p>
+            <div class="ws-card-meta"><span>3 hrs</span><span class="seats-pill seats-low">4 left</span></div>
+          </div>
+          <div class="ws-card-footer"><span class="ws-card-price">₹850</span><a href="booking.html"
+              class="ws-card-btn">Book →</a></div>
+        </div>
+
+        <div class="ws-card" data-category="crochet">
+          <div class="ws-card-img"><img
+              src="images/macrame.jpg" alt=""><span
+              class="ws-card-badge">Crochet</span></div>
+          <div class="ws-card-body">
+            <h3>Macramé Wall Hanging</h3>
+            <p>Learn square, spiral, and half-hitch knots for boho wall art.</p>
+            <div class="ws-card-meta"><span>3 hrs</span><span class="seats-pill seats-full">Full</span></div>
+          </div>
+          <div class="ws-card-footer"><span class="ws-card-price">₹1,000</span><span class="ws-card-btn"
+              style="color:var(--muted)">Waitlist →</span></div>
+        </div>
+
+        <div class="ws-card " data-category="crochet">
+          <div class="ws-card-img"><img
+              src="images/toy.jpg" alt=""><span
+              class="ws-card-badge">Crochet</span></div>
+          <div class="ws-card-body">
+            <h3>Amigurumi Toy Making</h3>
+            <p>Crochet adorable stuffed animals. Take home your handmade critter.</p>
+            <div class="ws-card-meta"><span>3.5 hrs</span><span class="seats-pill seats-ok">11 left</span></div>
+          </div>
+          <div class="ws-card-footer"><span class="ws-card-price">₹1,100</span><a href="booking.html"
+              class="ws-card-btn">Book →</a></div>
+        </div>
+
+      </div>
+      <p id="noResults">No workshops in this category right now. Check back soon.</p>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container footer-grid">
+      <div class="footer-brand"><span class="nav-logo">Craft<span style="color:var(--accent)">Circle</span></span>
+        <p>A creative studio in Mumbai where makers come to learn and create.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Navigate</h5>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="workshops.html">Workshops</a></li>
+          <li><a href="calendar.html">Calendar</a></li>
+          <li><a href="booking.html">Booking</a></li>
+          <li><a href="materials.html">Materials</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Workshops</h5>
+        <ul>
+          <li><a href="#">Painting</a></li>
+          <li><a href="#">Pottery</a></li>
+          <li><a href="#">Candle Making</a></li>
+          <li><a href="#">Crochet</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Contact</h5>
+        <p>42 Maker's Lane, Bandra West</p>
+        <p>Mumbai, MH 400050</p>
+        <p style="margin-top:.5rem">hello@craftcircle.in</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 CraftCircle Studio.</p>
+      <p>Made with care in Mumbai.</p>
+    </div>
+  </footer>
+  <script src="js/main.js"></script>
+  <script src="js/workshop.js"></script>
+</body>
+</html>

@@ -1,0 +1,377 @@
+/* IMAGE BANNER — full bleed with text overlay, unique to materials */
+.mat-banner {
+    padding-top: 60px;
+    position: relative;
+    height: 320px;
+    overflow: hidden
+}
+
+.mat-banner img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    z-index: 0
+}
+
+.mat-banner-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to right, rgba(17, 17, 16, .85) 35%, rgba(17, 17, 16, .25) 100%);
+    z-index: 1
+}
+
+.mat-banner-content {
+    position: relative;
+    z-index: 2;
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 3rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end
+}
+
+.mat-banner h1 {
+    font-family: var(--font-display);
+    font-size: clamp(2rem, 3.5vw, 2.8rem);
+    font-weight: 300;
+    color: var(--white);
+    line-height: 1.1
+}
+
+.mat-banner h1 em {
+    font-style: italic;
+    color: var(--accent)
+}
+
+.mat-banner p {
+    margin-top: .5rem;
+    font-size: .82rem;
+    color: rgba(255, 255, 255, .5);
+    max-width: 380px;
+    line-height: 1.6
+}
+
+.mat-banner-tag {
+    margin-top: 1rem;
+    display: inline-flex;
+    align-items: center;
+    gap: .4rem;
+    border: 1px solid rgba(255, 255, 255, .2);
+    padding: .35rem .85rem;
+    font-size: .65rem;
+    font-weight: 500;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, .55)
+}
+
+/* TAB NAVIGATION — unique to materials page */
+.mat-tabs {
+    background: var(--white);
+    border-bottom: 1px solid var(--border);
+    position: sticky;
+    top: 60px;
+    z-index: 100
+}
+
+.mat-tabs-inner {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 3rem;
+    display: flex;
+    gap: 0
+}
+
+.mat-tab {
+    background: none;
+    border: none;
+    border-bottom: 2px solid transparent;
+    padding: .85rem 1.25rem;
+    font-family: var(--font-body);
+    font-size: .7rem;
+    font-weight: 500;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+    color: var(--muted);
+    cursor: pointer;
+    white-space: nowrap;
+    transition: all .2s
+}
+
+.mat-tab:hover {
+    color: var(--ink)
+}
+
+.mat-tab.active {
+    color: var(--ink);
+    border-bottom-color: var(--accent)
+}
+
+/* CRAFT CONTENT — horizontal card layout, different from split blocks */
+.mat-section {
+    padding: 2.5rem 0 4rem
+}
+
+.craft-panel {
+    display: none
+}
+
+.craft-panel.active {
+    display: block
+}
+
+.craft-card {
+    display: grid;
+    grid-template-columns: 380px 1fr;
+    background: var(--white);
+    border: 1px solid var(--border);
+    overflow: hidden;
+    margin-bottom: 2rem
+}
+
+.craft-card-img {
+    height: 100%;
+    min-height: 300px;
+    overflow: hidden;
+    position: relative
+}
+
+.craft-card-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform .5s
+}
+
+.craft-card:hover .craft-card-img img {
+    transform: scale(1.03)
+}
+
+.craft-card-body {
+    padding: 2rem 2.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center
+}
+
+.craft-card-body h2 {
+    font-family: var(--font-display);
+    font-size: 1.75rem;
+    font-weight: 300;
+    line-height: 1.1;
+    color: var(--ink);
+    margin-bottom: .35rem
+}
+
+.craft-card-body h2 em {
+    font-style: italic
+}
+
+.craft-subtitle {
+    font-size: .68rem;
+    font-weight: 500;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    color: var(--accent-dark);
+    margin-bottom: 1.5rem
+}
+
+.materials-cols {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem
+}
+
+.mat-group h5 {
+    font-size: .58rem;
+    font-weight: 700;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    margin-bottom: .75rem;
+    padding-bottom: .4rem;
+    border-bottom: 1px solid var(--border)
+}
+
+.mat-group.provided h5 {
+    color: var(--accent-dark)
+}
+
+.mat-group.bring h5 {
+    color: var(--muted)
+}
+
+.mat-item {
+    display: flex;
+    align-items: flex-start;
+    gap: .5rem;
+    padding: .35rem 0;
+    font-size: .78rem;
+    color: var(--ink-light);
+    line-height: 1.35;
+    border-bottom: 1px solid var(--off-white)
+}
+
+.mat-item::before {
+    content: '';
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: var(--accent);
+    flex-shrink: 0;
+    margin-top: 5px
+}
+
+.mat-item.bring-item::before {
+    background: var(--border)
+}
+
+.prep-tip {
+    background: var(--off-white);
+    border-left: 2px solid var(--accent);
+    padding: .85rem 1.15rem;
+    font-size: .75rem;
+    color: var(--muted);
+    line-height: 1.6
+}
+
+.prep-tip strong {
+    display: block;
+    color: var(--ink);
+    font-weight: 600;
+    margin-bottom: .15rem;
+    font-size: .68rem;
+    letter-spacing: .05em;
+    text-transform: uppercase
+}
+
+/* GUIDELINES — 2-col grid with numbered items */
+.gl-section {
+    background: var(--ink);
+    padding: 3.5rem 0
+}
+
+.gl-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: rgba(255, 255, 255, .05);
+    margin-top: 2rem
+}
+
+.gl-item {
+    background: var(--ink);
+    padding: 1.75rem;
+    transition: background .15s
+}
+
+.gl-item:hover {
+    background: rgba(255, 255, 255, .02)
+}
+
+.gl-num {
+    font-family: var(--font-display);
+    font-size: 2.25rem;
+    font-weight: 300;
+    color: rgba(255, 255, 255, .05);
+    line-height: 1;
+    margin-bottom: .75rem
+}
+
+.gl-item h4 {
+    font-family: var(--font-display);
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: var(--white);
+    margin-bottom: .5rem
+}
+
+.gl-item p {
+    font-size: .78rem;
+    color: rgba(255, 255, 255, .35);
+    line-height: 1.65
+}
+
+/* CTA strip — different from fullwidth CTA on other pages */
+.cta-strip {
+    background: var(--accent);
+    padding: 2.5rem 0
+}
+
+.cta-strip-inner {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap
+}
+
+.cta-strip h2 {
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: var(--ink)
+}
+
+.cta-strip p {
+    font-size: .82rem;
+    color: rgba(17, 17, 16, .55);
+    margin-top: .25rem
+}
+
+@media(max-width:900px) {
+    .craft-card {
+        grid-template-columns: 1fr
+    }
+
+    .craft-card-img {
+        height: 240px;
+        min-height: auto
+    }
+
+    .materials-cols {
+        grid-template-columns: 1fr
+    }
+
+    .gl-grid {
+        grid-template-columns: 1fr 1fr
+    }
+}
+
+@media(max-width:600px) {
+    .gl-grid {
+        grid-template-columns: 1fr
+    }
+
+    .mat-banner {
+        height: 260px
+    }
+
+    .cta-strip-inner {
+        flex-direction: column;
+        text-align: center
+    }
+}
+
+
+.materials-container {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 3rem;
+}
+
+.gl-section .section-eyebrow {
+  color: rgba(255,255,255,.25);
+}
+
+.gl-section .section-title {
+  color: var(--white);
+}

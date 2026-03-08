@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Materials — CraftCircle</title>
+  <meta name="description" content="Everything you need to know about workshop materials and studio guidelines.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Outfit:wght@300;400;500;600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/materials.css">
+</head>
+
+<body class="relative">
+  <nav class="cc-nav"><a href="index.html" class="nav-logo">Craft<span>Circle</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="workshops.html">Workshops</a></li>
+      <li><a href="calendar.html">Calendar</a></li>
+      <li><a href="booking.html">Booking</a></li>
+      <li><a href="materials.html" class="active">Materials</a></li>
+    </ul>
+    <div class="nav-right"><a href="booking.html" class="nav-btn">Book a Seat ↗</a><button class="cc-hamburger"
+        onclick="toggleMobileNav()"><span></span><span></span><span></span></button></div>
+  </nav>
+  <div class="mobile-nav"><a href="index.html">Home</a><a href="workshops.html">Workshops</a><a
+      href="calendar.html">Calendar</a><a href="booking.html">Booking</a><a href="materials.html"
+      class="active">Materials</a></div>
+
+  <!-- IMAGE BANNER with text overlay — unique to materials -->
+  <div class="mat-banner">
+    <img src="Images/arc.jpg"
+      alt="Craft materials" class="gsap-parallax">
+    <div class="mat-banner-overlay"></div>
+    <div class="mat-banner-content">
+      <h1>Materials & <em>Guidelines</em></h1>
+      <p>Everything provided. Everything you need before you arrive.</p>
+      <span class="mat-banner-tag reveal">✓ All Core Materials Included</span>
+    </div>
+  </div>
+
+  <!-- TABBED NAVIGATION — unique to this page -->
+  <div class="mat-tabs">
+    <div class="mat-tabs-inner">
+      <button class="mat-tab active" onclick="showCraft('painting',this)">Painting</button>
+      <button class="mat-tab" onclick="showCraft('pottery',this)">Pottery</button>
+      <button class="mat-tab" onclick="showCraft('candle',this)">Candle Making</button>
+      <button class="mat-tab" onclick="showCraft('crochet',this)">Crochet & Fiber</button>
+    </div>
+  </div>
+
+  <section class="mat-section">
+    <div class="materials-container">
+
+      <div class="craft-panel active" id="panel-painting">
+        <div class="craft-card reveal">
+          <div class="craft-card-img"><img
+              src="Images/resin.jpg" alt="Painting">
+          </div>
+          <div class="craft-card-body">
+            <h2>Painting <em>Workshops</em></h2>
+            <div class="craft-subtitle">Acrylic Pour · Watercolor Florals · Galaxy Resin Art</div>
+            <div class="materials-cols">
+              <div class="mat-group provided">
+                <h5>Provided</h5>
+                <div class="mat-item">Acrylic or watercolor paints — full palette</div>
+                <div class="mat-item">Canvas or watercolor paper (A3)</div>
+                <div class="mat-item">Brushes — flat, round, fan</div>
+                <div class="mat-item">Palette cups & mixing trays</div>
+                <div class="mat-item">Silicone cups (pour sessions)</div>
+                <div class="mat-item">Resin & pigments (resin sessions)</div>
+                <div class="mat-item">Apron & gloves</div>
+              </div>
+              <div class="mat-group bring">
+                <h5>Bring Your Own (Optional)</h5>
+                <div class="mat-item bring-item">Favourite brushes or palette knives</div>
+                <div class="mat-item bring-item">Reference photos or inspiration</div>
+              </div>
+            </div>
+            <div class="prep-tip"><strong>Instructor's Tip</strong>Wear clothes you don't mind staining. Tie back long
+              hair for resin sessions.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="craft-panel" id="panel-pottery">
+        <div class="craft-card reveal">
+          <div class="craft-card-img"><img
+              src="Images/ceramics.jpg" alt="Pottery"></div>
+          <div class="craft-card-body">
+            <h2>Pottery <em>Workshops</em></h2>
+            <div class="craft-subtitle">Wheel Throwing · Handbuilding · Glaze & Fire</div>
+            <div class="materials-cols">
+              <div class="mat-group provided">
+                <h5>Provided</h5>
+                <div class="mat-item">2 kg stoneware clay per person</div>
+                <div class="mat-item">Pottery wheel access</div>
+                <div class="mat-item">Wire, sponge, ribs & loop tools</div>
+                <div class="mat-item">Kiln firing — 2 weeks post-session</div>
+                <div class="mat-item">Glazes for one piece</div>
+                <div class="mat-item">Work apron & towels</div>
+              </div>
+              <div class="mat-group bring">
+                <h5>Bring Your Own (Optional)</h5>
+                <div class="mat-item bring-item">Wooden skewers for texture</div>
+                <div class="mat-item bring-item">Small cutting board for slab work</div>
+              </div>
+            </div>
+            <div class="prep-tip"><strong>Instructor's Tip</strong>Remove rings and bracelets. Your fired piece is ready
+              2–3 weeks later.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="craft-panel" id="panel-candle">
+        <div class="craft-card reveal">
+          <div class="craft-card-img"><img
+              src="Images/soy.jpg"
+              alt="Candle making"></div>
+          <div class="craft-card-body">
+            <h2>Candle <em>Making</em></h2>
+            <div class="craft-subtitle">Botanical Soy · Pillar Candle Sculpting</div>
+            <div class="materials-cols">
+              <div class="mat-group provided">
+                <h5>Provided</h5>
+                <div class="mat-item">Soy wax or beeswax — 300g</div>
+                <div class="mat-item">Glass vessels & tins</div>
+                <div class="mat-item">Pre-tabbed cotton wicks</div>
+                <div class="mat-item">20+ fragrance oils</div>
+                <div class="mat-item">Dried botanicals</div>
+                <div class="mat-item">Dyes and micas</div>
+                <div class="mat-item">Pouring pitchers & tools</div>
+              </div>
+              <div class="mat-group bring">
+                <h5>Bring Your Own (Optional)</h5>
+                <div class="mat-item bring-item">Custom labels for gifting</div>
+                <div class="mat-item bring-item">Extra containers</div>
+              </div>
+            </div>
+            <div class="prep-tip"><strong>Instructor's Tip</strong>Candles need 24 hrs to cure. Bring a small bag to
+              carry them home.</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CROCHET -->
+      <div class="craft-panel" id="panel-crochet">
+        <div class="craft-card reveal">
+          <div class="craft-card-img"><img
+              src="Images/toy.jpg" alt="Crochet">
+          </div>
+          <div class="craft-card-body">
+            <h2>Crochet & <em>Fiber Arts</em></h2>
+            <div class="craft-subtitle">Granny Squares · Macramé · Amigurumi</div>
+            <div class="materials-cols">
+              <div class="mat-group provided">
+                <h5>Provided</h5>
+                <div class="mat-item">Yarn — 100g cotton or acrylic</div>
+                <div class="mat-item">Crochet hook set — 2.5–5mm</div>
+                <div class="mat-item">Tapestry needles & stitch markers</div>
+                <div class="mat-item">Macramé rope — 3mm & 5mm</div>
+                <div class="mat-item">Wooden dowel rod</div>
+                <div class="mat-item">Safety eyes & stuffing (amigurumi)</div>
+                <div class="mat-item">Printed pattern sheets</div>
+              </div>
+              <div class="mat-group bring">
+                <h5>Bring Your Own (Optional)</h5>
+                <div class="mat-item bring-item">Your favourite crochet hook</div>
+                <div class="mat-item bring-item">Small rounded scissors</div>
+              </div>
+            </div>
+            <div class="prep-tip"><strong>Instructor's Tip</strong>Complete beginners welcome — zero experience
+              required.</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- GUIDELINES -->
+  <section class="gl-section">
+    <div style="max-width:1140px;margin:0 auto;padding:0 3rem">
+      <div class="section-eyebrow ">Before you arrive</div>
+      <h2 class="section-title">Studio <em>Guidelines</em></h2>
+      <div class="gl-grid">
+        <div class="gl-item">
+          <div class="gl-num">01</div>
+          <h4>Arrive 10 Min Early</h4>
+          <p>Settle in, meet your instructor, and choose materials calmly.</p>
+        </div>
+        <div class="gl-item">
+          <div class="gl-num">02</div>
+          <h4>Dress Comfortably</h4>
+          <p>Aprons provided, but materials have a way of travelling.</p>
+        </div>
+        <div class="gl-item">
+          <div class="gl-num">03</div>
+          <h4>Phones on Silent</h4>
+          <p>Photos welcome at session's close. Stay present while creating.</p>
+        </div>
+        <div class="gl-item">
+          <div class="gl-num">04</div>
+          <h4>Cancellation Policy</h4>
+          <p>Full refund 48+ hrs in advance. One free reschedule within 48 hrs.</p>
+        </div>
+        <div class="gl-item">
+          <div class="gl-num">05</div>
+          <h4>Accessibility</h4>
+          <p>Fully wheelchair accessible. Mention needs when booking.</p>
+        </div>
+        <div class="gl-item">
+          <div class="gl-num">06</div>
+          <h4>Refreshments</h4>
+          <p>Chai, filter coffee, and light snacks at every session.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA STRIP — horizontal bar, unique to materials -->
+  <div class="cta-strip">
+    <div class="cta-strip-inner">
+      <div>
+        <h2>All set. Let's make something.</h2>
+        <p>Your materials are waiting. Your seat is there to be claimed.</p>
+      </div>
+      <a href="booking.html" class="btn-dark reveal">Book a Workshop →</a>
+    </div>
+  </div>
+
+  <footer>
+    <div class="container footer-grid">
+      <div class="footer-brand"><span class="nav-logo">Craft<span style="color:var(--accent)">Circle</span></span>
+        <p>A creative studio in Mumbai.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Navigate</h5>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="workshops.html">Workshops</a></li>
+          <li><a href="calendar.html">Calendar</a></li>
+          <li><a href="booking.html">Booking</a></li>
+          <li><a href="materials.html">Materials</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Workshops</h5>
+        <ul>
+          <li><a href="#">Painting</a></li>
+          <li><a href="#">Pottery</a></li>
+          <li><a href="#">Candle Making</a></li>
+          <li><a href="#">Crochet</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Contact</h5>
+        <p>42 Maker's Lane, Bandra West</p>
+        <p>Mumbai, MH 400050</p>
+        <p style="margin-top:.5rem">hello@craftcircle.in</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 CraftCircle Studio.</p>
+      <p>Made with care in Mumbai.</p>
+    </div>
+  </footer>
+  <script src="js/main.js"></script>
+  <script src="js/material.js"></script>
+</body>
+</html>

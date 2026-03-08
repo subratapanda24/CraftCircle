@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calendar — CraftCircle</title>
+  <meta name="description" content="Browse our workshop calendar. Select a date to view available sessions.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Outfit:wght@300;400;500;600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/calendar.css">
+</head>
+
+<body class="relative">
+  <nav class="cc-nav"><a href="index.html" class="nav-logo">Craft<span>Circle</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="workshops.html">Workshops</a></li>
+      <li><a href="calendar.html" class="active">Calendar</a></li>
+      <li><a href="booking.html">Booking</a></li>
+      <li><a href="materials.html">Materials</a></li>
+    </ul>
+    <div class="nav-right"><a href="booking.html" class="nav-btn">Book a Seat ↗</a><button class="cc-hamburger"
+        onclick="toggleMobileNav()"><span></span><span></span><span></span></button></div>
+  </nav>
+  <div class="mobile-nav"><a href="index.html">Home</a><a href="workshops.html">Workshops</a><a href="calendar.html"
+      class="active">Calendar</a><a href="booking.html">Booking</a><a href="materials.html">Materials</a></div>
+
+  <!-- CLEAN INLINE HEADER — no image, no split, distinct from other pages -->
+  <div class="cal-header">
+    <div class="cal-header-inner">
+      <div>
+        <div class="section-eyebrow reveal">Plan your sessions</div>
+        <h1 class="reveal">Workshop <em>Calendar</em></h1>
+      </div>
+      <p class="reveal">Click any highlighted day to see available workshops and remaining seats.</p>
+    </div>
+  </div>
+
+  <section class="cal-section">
+    <div class="container">
+      <div class="cal-layout">
+        <div class="cal-box reveal">
+          <div class="cal-nav"><button class="cal-nav-btn" onclick="changeMonth(-1)">‹</button><span class="cal-month"
+              id="calMonthLabel"></span><button class="cal-nav-btn" onclick="changeMonth(1)">›</button></div>
+          <div class="day-headers">
+            <div class="day-hdr">Su</div>
+            <div class="day-hdr">Mo</div>
+            <div class="day-hdr">Tu</div>
+            <div class="day-hdr">We</div>
+            <div class="day-hdr">Th</div>
+            <div class="day-hdr">Fr</div>
+            <div class="day-hdr">Sa</div>
+          </div>
+          <div class="cal-grid" id="calGrid"></div>
+          <div class="cal-legend">
+            <div class="legend-item"><span class="legend-dot accent"></span>Has sessions</div>
+            <div class="legend-item"><span class="legend-dot today-dot"></span>Today</div>
+          </div>
+        </div>
+        <div class="event-panel reveal" id="eventPanel">
+          <div class="ep-header">
+            <h3 id="epTitle">Select a Date</h3>
+            <p id="epSubtitle">Click a highlighted day</p>
+          </div>
+          <div id="epEmpty" class="ep-empty">
+            <p>Dates with a gold dot have sessions. Pick one to explore.</p>
+          </div>
+          <div id="epEvents" style="display:none">
+            <div class="ep-events" id="epEventList"></div>
+            <div class="ep-cta"><a href="booking.html" class="btn-book-full">Book for this Date</a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container footer-grid">
+      <div class="footer-brand"><span class="nav-logo">Craft<span style="color:var(--accent)">Circle</span></span>
+        <p>A creative studio in Mumbai.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Navigate</h5>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="workshops.html">Workshops</a></li>
+          <li><a href="calendar.html">Calendar</a></li>
+          <li><a href="booking.html">Booking</a></li>
+          <li><a href="materials.html">Materials</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Workshops</h5>
+        <ul>
+          <li><a href="#">Painting</a></li>
+          <li><a href="#">Pottery</a></li>
+          <li><a href="#">Candle Making</a></li>
+          <li><a href="#">Crochet</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Contact</h5>
+        <p>42 Maker's Lane, Bandra West</p>
+        <p>Mumbai, MH 400050</p>
+        <p style="margin-top:.5rem">hello@craftcircle.in</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 CraftCircle Studio.</p>
+      <p>Made with care in Mumbai.</p>
+    </div>
+  </footer>
+  <script>
+    const events = {
+      '2026-03-05': [{ name: 'Watercolor Florals', time: '10:00 AM', seats: 14, cat: 'Painting', color: '#c8a96e' }],
+      '2026-03-07': [{ name: 'Crochet Granny Squares', time: '2:00 PM', seats: 4, cat: 'Crochet', color: '#8aab96' }],
+      '2026-03-10': [{ name: 'Hand-Built Ceramics', time: '11:00 AM', seats: 12, cat: 'Pottery', color: '#a8dadc' }, { name: 'Botanical Soy Candles', time: '3:00 PM', seats: 10, cat: 'Candle', color: '#e9c46a' }],
+      '2026-03-12': [{ name: 'Macramé Wall Hanging', time: '3:00 PM', seats: 0, cat: 'Crochet', color: '#888' }],
+      '2026-03-14': [{ name: 'Abstract Acrylic Pour', time: '10:00 AM', seats: 8, cat: 'Painting', color: '#c8a96e' }],
+      '2026-03-17': [{ name: 'Wheel Throwing', time: '11:00 AM', seats: 3, cat: 'Pottery', color: '#a8dadc' }, { name: 'Pillar Candle Sculpting', time: '4:00 PM', seats: 7, cat: 'Candle', color: '#e9c46a' }],
+      '2026-03-19': [{ name: 'Galaxy Resin Art', time: '2:00 PM', seats: 6, cat: 'Painting', color: '#c8a96e' }],
+      '2026-03-21': [{ name: 'Amigurumi Toy Making', time: '10:00 AM', seats: 11, cat: 'Crochet', color: '#8aab96' }],
+      '2026-03-24': [{ name: 'Glaze & Fire', time: '11:00 AM', seats: 9, cat: 'Pottery', color: '#a8dadc' }, { name: 'Watercolor Florals', time: '3:00 PM', seats: 12, cat: 'Painting', color: '#c8a96e' }],
+      '2026-03-28': [{ name: 'Abstract Acrylic Pour', time: '10:00 AM', seats: 5, cat: 'Painting', color: '#c8a96e' }, { name: 'Botanical Soy Candles', time: '2:00 PM', seats: 2, cat: 'Candle', color: '#e9c46a' }],
+    };
+    let yr = 2026, mo = 2;
+    let selectedDate = null;
+    const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+    function renderCal() {
+      document.getElementById('calMonthLabel').textContent = months[mo] + ' ' + yr;
+      const grid = document.getElementById('calGrid'); grid.innerHTML = '';
+      const first = new Date(yr, mo, 1).getDay(), days = new Date(yr, mo + 1, 0).getDate();
+      const today = new Date();
+      for (let i = 0; i < first; i++) { const c = document.createElement('div'); c.className = 'cal-cell empty'; grid.appendChild(c) }
+      for (let d = 1; d <= days; d++) {
+        const ds = `${yr}-${String(mo + 1).padStart(2, '0')}-${String(d).padStart(2, '0')}`;
+        const c = document.createElement('div'); c.className = 'cal-cell'; c.textContent = d;
+        c.style.opacity = '0'; c.style.transform = 'scale(.85)';
+        setTimeout(() => { c.style.transition = 'opacity .25s, transform .25s'; c.style.opacity = '1'; c.style.transform = 'scale(1)' }, (d + first) * 15);
+        if (today.getFullYear() === yr && today.getMonth() === mo && today.getDate() === d) c.classList.add('today');
+        if (events[ds]) { c.classList.add('has-event'); c.onclick = () => showEvents(ds, c) }
+        grid.appendChild(c);
+      }
+    }
+
+    function showEvents(ds, cell) {
+      selectedDate = ds;
+      document.querySelectorAll('.cal-cell.selected').forEach(c => c.classList.remove('selected'));
+      cell.classList.add('selected');
+      const evs = events[ds]; const d = new Date(ds + 'T12:00:00');
+      document.getElementById('epTitle').textContent = d.toLocaleDateString('en-IN', { weekday: 'long', day: 'numeric', month: 'long' });
+      document.getElementById('epSubtitle').textContent = evs.length + ' session' + (evs.length > 1 ? 's' : '') + ' available';
+      document.getElementById('epEmpty').style.display = 'none';
+      const el = document.getElementById('epEvents'); el.style.display = 'block'; el.style.opacity = '0'; el.style.transform = 'translateY(8px)';
+      setTimeout(() => { el.style.transition = 'opacity .3s, transform .3s'; el.style.opacity = '1'; el.style.transform = 'translateY(0)' }, 30);
+      const list = document.getElementById('epEventList'); list.innerHTML = '';
+      evs.forEach(ev => {
+        const sc = ev.seats === 0 ? 'seats-full' : ev.seats <= 5 ? 'seats-low' : 'seats-ok';
+        const st = ev.seats === 0 ? 'Full' : ev.seats + ' seats';
+        const row = document.createElement('div'); row.className = 'ep-event';
+        row.innerHTML = `
+        <div class="ep-bar" style="background:${ev.color}"></div>
+
+        <div>
+          <h4>${ev.name}</h4>
+          <p>${ev.time} · ${ev.cat}</p> 
+        </div>
+
+        <span class="ep-seats ${sc}">${st}</span>
+
+        <a class="ep-book"
+        href="booking.html?workshop=${encodeURIComponent(ev.name)}&date=${ds}&time=${encodeURIComponent(ev.time)}">
+        Book
+        </a>
+      `;
+
+        list.appendChild(row);
+      });
+
+      const bookBtn = document.querySelector('.btn-book-full');
+      bookBtn.href = `booking.html?date=${ds}`;
+    }
+    function changeMonth(d) { mo += d; if (mo < 0) { mo = 11; yr-- } if (mo > 11) { mo = 0; yr++ } renderCal(); document.getElementById('epEmpty').style.display = 'block'; document.getElementById('epEvents').style.display = 'none'; document.getElementById('epTitle').textContent = 'Select a Date'; document.getElementById('epSubtitle').textContent = 'Click a highlighted day' }
+    renderCal();
+  </script>
+</body>
+</html>

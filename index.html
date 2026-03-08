@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CraftCircle — DIY Workshop Studio</title>
+  <meta name="description"
+    content="Intimate studio workshops for curious makers. Learn pottery, painting, candle-craft and more in Mumbai.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Outfit:wght@300;400;500;600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+  <nav class="cc-nav">
+    <a href="index.html" class="nav-logo">Craft<span>Circle</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="workshops.html">Workshops</a></li>
+      <li><a href="calendar.html">Calendar</a></li>
+      <li><a href="booking.html">Booking</a></li>
+      <li><a href="materials.html">Materials</a></li>
+    </ul>
+    <div class="nav-right">
+      <a href="booking.html" class="nav-btn">Book a Seat ↗</a>
+      <button class="cc-hamburger" onclick="toggleMobileNav()"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+  <div class="mobile-nav">
+    <a href="index.html" class="active">Home</a>
+    <a href="workshops.html">Workshops</a>
+    <a href="calendar.html">Calendar</a>
+    <a href="booking.html">Booking</a>
+    <a href="materials.html">Materials</a>
+  </div>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-left">
+      <span class="section-eyebrow">New Summer Collection 2026</span>
+      <h1 class="hero-h1">Bring Your Creative <br><em>Ideas To Life.</em></h1>
+      <p class="hero-p">Intimate studio workshops for curious makers. Learn pottery, painting, candle-craft and
+        more from masters of their art — in a space that feels like home.</p>
+      <div class="hero-tags">
+        Pottery • Painting • Candle Making • Macramé
+      </div>
+      <div class="hero-actions">
+        <a href="workshops.html" class="btn-dark">Explore Workshops</a>
+        <a href="calendar.html" class="btn-ghost">View Schedule →</a>
+      </div>
+      <div class="makers-wrapper reveal">
+        <div class="makers-row">
+          <img src="https://images.unsplash.com/photo-1494790108755-2616b612b5ca?w=80&h=80&fit=crop&crop=face" alt="">
+          <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=80&h=80&fit=crop&crop=face" alt="">
+          <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=80&h=80&fit=crop&crop=face" alt="">
+          <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=80&h=80&fit=crop&crop=face" alt="">
+        </div>
+        <div>
+          <strong style="display:block;font-size:.78rem;color:var(--ink)">1,200+ happy makers</strong>
+          <span style="font-size:.7rem;color:var(--muted)">Across Mumbai studios</span>
+        </div>
+      </div>
+      <div class="hero-rating">
+          ⭐⭐⭐⭐⭐ <span>Rated 4.8 by creators</span>
+      </div>
+    </div>
+    <div class="hero-right">
+      <div class="hero-img-main"><img src="Images/watercolor.jpg" alt="Pottery workshop"></div>
+      <div class="hero-overlay"></div>
+      <div class="hero-card">
+        <div class="hero-card-label">Featured Session</div>
+        <h4>Wheel Throwing</h4>
+        <p>3 seats remaining · ₹1,800</p>
+        <a href="booking.html" class="hero-card-arrow">↗</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURED WORKSHOPS -->
+<section style="padding:4rem 0">
+  <div class="container">
+    <div class="section-header">
+      <div>
+        <div class="section-eyebrow">Curated for you</div>
+        <h2 class="section-title">Our <em>Featured</em> Workshops</h2>
+      </div>
+      <a href="workshops.html" class="btn-ghost"
+        style="border-bottom:1px solid var(--ink);color:var(--ink);font-size:.78rem">View all →</a>
+    </div>
+
+    <div class="workshops-grid">
+
+      <div class="w-card">
+        <div class="w-card-img">
+          <img src="Images/wheel.jpg" alt="Pottery">
+          <div class="w-card-img-overlay"></div>
+          <span class="w-card-cat">Pottery</span>
+        </div>
+        <div class="w-card-body">
+          <h3>Wheel Throwing for Beginners</h3>
+          <p>Feel the clay rise and take form under your hands. A meditative, tactile introduction to the potter's wheel.</p>
+          <div class="w-card-meta"><span>3 hrs</span><span>3 seats left</span><span>₹1,800</span></div>
+          <a href="booking.html" class="btn-card-link">Book this session →</a>
+        </div>
+      </div>
+
+      <div class="w-card">
+        <div class="w-card-img">
+          <img src="Images/water.jpg" alt="Watercolor">
+          <div class="w-card-img-overlay"></div>
+          <span class="w-card-cat">Painting</span>
+        </div>
+        <div class="w-card-body">
+          <h3>Watercolor Florals</h3>
+          <p>Master wet-on-wet technique to paint luminous botanical compositions.</p>
+          <div class="w-card-meta"><span>2 hrs</span><span>14 seats</span><span>₹1,000</span></div>
+          <a href="booking.html" class="btn-card-link">Book this session →</a>
+        </div>
+      </div>
+
+      <div class="w-card">
+        <div class="w-card-img">
+          <img src="Images/soy.jpg" alt="Candle">
+          <div class="w-card-img-overlay"></div>
+          <span class="w-card-cat">Candle Making</span>
+        </div>
+        <div class="w-card-body">
+          <h3>Botanical Soy Candles</h3>
+          <p>Blend signature fragrances and embed dried botanicals into handcrafted soy candles.</p>
+          <div class="w-card-meta"><span>2 hrs</span><span>10 seats</span><span>₹950</span></div>
+          <a href="booking.html" class="btn-card-link">Book this session →</a>
+        </div>
+      </div>
+
+      <div class="w-card">
+        <div class="w-card-img">
+          <img src="Images/toy.jpg" alt="Amigurumi">
+          <div class="w-card-img-overlay"></div>
+          <span class="w-card-cat">Crochet</span>
+        </div>
+        <div class="w-card-body">
+          <h3>Amigurumi Toy Making</h3>
+          <p>Learn the basics of crochet while crafting adorable handmade toys using soft yarn and simple stitches.</p>
+          <div class="w-card-meta"><span>2.5 hrs</span><span>8 seats</span><span>₹1,100</span></div>
+          <a href="booking.html" class="btn-card-link">Book this session →</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+  <!-- HOW IT WORKS -->
+  <section class="split-section">
+    <div class="split-img">
+      <img src="Images/workshop.jpg"
+        alt="Craft studio">
+    </div>
+    <div class="split-content">
+      <div class="section-eyebrow">Simple process</div>
+      <h2 class="section-title" style="margin-bottom:1rem">How It <em>Works</em></h2>
+      <p class="reveal"
+        style="font-size:.84rem;color:var(--ink-light);line-height:1.7;max-width:400px;margin-bottom:1.5rem">From
+        discovery to creation in three effortless steps. All materials included, all levels welcome.</p>
+      <div>
+        <div class="step">
+          <div class="step-num">1</div>
+          <p><strong>Choose a Workshop</strong>Browse by craft, date, or session type.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">2</div>
+          <p><strong>Reserve Your Seat</strong>Book online in minutes. All materials provided.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">3</div>
+          <p><strong>Create & Take Home</strong>Make something beautiful that's yours to keep.</p>
+        </div>
+      </div>
+      <a href="workshops.html" class="btn-dark reveal">Browse Workshops</a>
+    </div>
+  </section>
+
+  <!-- UPCOMING SESSIONS -->
+  <section class="sessions-section">
+    <div style="max-width:1140px;margin:0 auto;padding:0 3rem">
+      <div class="section-eyebrow">Don't miss out</div>
+      <h2 class="section-title">Upcoming <em>Sessions</em></h2>
+      <table class="sessions-table">
+        <thead>
+          <tr>
+            <th>Workshop</th>
+            <th>Category</th>
+            <th>Date & Time</th>
+            <th>Availability</th>
+            <th>Price</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="td-name">Watercolor Florals</td>
+            <td><span class="td-cat">Painting</span></td>
+            <td>Mar 5 · 10 AM</td>
+            <td><span class="td-seats seats-ok">14 seats</span></td>
+            <td>₹1,000</td>
+            <td><a href="booking.html" class="td-btn">Reserve</a></td>
+          </tr>
+          <tr>
+            <td class="td-name">Crochet Granny Squares</td>
+            <td><span class="td-cat">Crochet</span></td>
+            <td>Mar 7 · 2 PM</td>
+            <td><span class="td-seats seats-low">4 seats</span></td>
+            <td>₹850</td>
+            <td><a href="booking.html" class="td-btn">Reserve</a></td>
+          </tr>
+          <tr>
+            <td class="td-name">Hand-Built Ceramics</td>
+            <td><span class="td-cat">Pottery</span></td>
+            <td>Mar 10 · 11 AM</td>
+            <td><span class="td-seats seats-ok">12 seats</span></td>
+            <td>₹1,400</td>
+            <td><a href="booking.html" class="td-btn">Reserve</a></td>
+          </tr>
+          <tr>
+            <td class="td-name">Macramé Wall Hanging</td>
+            <td><span class="td-cat">Crochet</span></td>
+            <td>Mar 12 · 3 PM</td>
+            <td><span class="td-seats seats-full">Full</span></td>
+            <td>₹1,000</td>
+            <td><span class="td-btn-ghost">Waitlist →</span></td>
+          </tr>
+          <tr>
+            <td class="td-name">Abstract Acrylic Pour</td>
+            <td><span class="td-cat">Painting</span></td>
+            <td>Mar 14 · 10 AM</td>
+            <td><span class="td-seats seats-low">8 seats</span></td>
+            <td>₹1,200</td>
+            <td><a href="booking.html" class="td-btn">Reserve</a></td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="reveal" style="text-align:center;margin-top:1rem">
+        <a href="calendar.html" class="btn-ghost"
+          style="color:rgba(248, 241, 241, 0.45);border-color:rgba(248, 244, 244, 0.15);font-size:.78rem">View full calendar
+          →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <div class="cta-img reveal-left">
+      <img src="Images/session.jpg" alt="">
+    </div>
+    <div class="cta-content">
+      <div class="section-eyebrow ">Ready to create?</div>
+      <h2 class="reveal">Every Session is a <em>New Beginning.</em></h2>
+      <p class="reveal">All materials included. No experience necessary. Just bring your curiosity.</p>
+      <a href="booking.html" class="btn-dark-outline reveal">Book Your Seat Now</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <span class="nav-logo">Craft<span style="color:var(--accent)">Circle</span></span>
+        <p>A creative studio in Mumbai where makers of all levels come to learn, create, and connect through craft.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Navigate</h5>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="workshops.html">Workshops</a></li>
+          <li><a href="calendar.html">Calendar</a></li>
+          <li><a href="booking.html">Booking</a></li>
+          <li><a href="materials.html">Materials</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Workshops</h5>
+        <ul>
+          <li><a href="workshops.html">Painting</a></li>
+          <li><a href="workshops.html">Pottery</a></li>
+          <li><a href="workshops.html">Candle Making</a></li>
+          <li><a href="workshops.html">Crochet</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Contact</h5>
+        <p>42 Maker's Lane, Bandra West</p>
+        <p>Mumbai, MH 400050</p>
+        <p style="margin-top:.5rem">hello@craftcircle.in</p>
+        <p>+91 98765 43210</p>
+      </div>
+    </div>
+    <div class="footer-bottom" style="max-width:none;padding:1.5rem 3rem">
+      <p>© 2026 CraftCircle Studio.</p>
+      <p>Made with care in Mumbai.</p>
+    </div>
+  </footer>
+  <script src="js/main.js"></script>
+</body>
+</html>
