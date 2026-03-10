@@ -1,4 +1,3 @@
-/* FULL-WIDTH BANNER */
 .ws-banner {
     padding-top: 60px;
     background: var(--ink);
@@ -51,7 +50,6 @@
     object-position:top
 }
 
-/* FILTER */
 .filter-bar {
     background: var(--white);
     border-bottom: 1px solid var(--border);
@@ -105,7 +103,6 @@
     font-weight: 600
 }
 
-/* CARD GRID — different from index.html list layout */
 .ws-section {
     padding: 3rem 0 4rem
 }

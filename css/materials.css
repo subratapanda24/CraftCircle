@@ -1,4 +1,3 @@
-/* IMAGE BANNER — full bleed with text overlay, unique to materials */
 .mat-banner {
     padding-top: 60px;
     position: relative;
@@ -70,7 +69,6 @@
     color: rgba(255, 255, 255, .55)
 }
 
-/* TAB NAVIGATION — unique to materials page */
 .mat-tabs {
     background: var(--white);
     border-bottom: 1px solid var(--border);
@@ -112,7 +110,6 @@
     border-bottom-color: var(--accent)
 }
 
-/* CRAFT CONTENT — horizontal card layout, different from split blocks */
 .mat-section {
     padding: 2.5rem 0 4rem
 }
@@ -250,7 +247,6 @@
     text-transform: uppercase
 }
 
-/* GUIDELINES — 2-col grid with numbered items */
 .gl-section {
     background: #1c1c1c;
     padding: 3.5rem 0
@@ -297,7 +293,6 @@
     line-height: 1.65
 }
 
-/* CTA strip — different from fullwidth CTA on other pages */
 .cta-strip {
     background: var(--accent);
     padding: 2.5rem 0

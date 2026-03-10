@@ -1,5 +1,4 @@
 /* ===== CRAFTCIRCLE SHARED DESIGN SYSTEM ===== */
-/* Theme tokens — DO NOT CHANGE these colors or fonts */
 :root {
   --off-white: #f5f4f0;
   --white: #ffffff;
@@ -142,7 +141,6 @@ p {
   transform: translateY(-1px)
 }
 
-/* Hamburger */
 .cc-hamburger {
   display: none;
   background: none;
